@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: rgb(223, 242, 148);
+            text-align: center;
+            font-size: 16pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é Brasileiro?</h1>
+    <p>Qual é o seu país de origem?</p>
+    <input type="text" id="p" pattern="([a-z])"> <input type="button" value="enviar" onclick="clicou()">
+    <div id="resut">
+
+    </div>
+    <script>
+        function clicou() {
+            var pais = window.document.querySelector('input#p')
+            var res = window.document.querySelector('div#resut')
+            var nasc = pais.value
+            if (nasc == 'brasil'){
+                res.innerHTML = '<p>Você é brasileiro!</p>'
+            } else {
+                res.innerHTML = '<p>Você é estrangeiro!</p>'
+            }
+        }
+    </script>
+</body>
+</html>
